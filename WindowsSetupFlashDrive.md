@@ -1,7 +1,7 @@
 # Problem
 Recent Windows setup ISO files provided by Microsoft contain `install.wim` or `install.esd` that is larger than the maximum filesize of the FAT32 filesystem (4GiB). This makes the creation of bootable USB mass storage setup media (flash drives) more complex.
 
-At first glance, the solution is to create a single exFAT or NTFS partition on the installation media, but because the UEFI specification only mandates that FAT12/16/32 filesystems are bootable, this is only suitable if the vendor chose to add support for these additional filesystems. This support is not typically publicly documented. Another solution may be to apply "maximum" compression to the file using `dism` to decrease filesize to below the 4GiB limit of FAT32, but this method requires a Windows host, additional skill and time, and the associated decompresion will increase CPU overhead during installation, which may result in lengthier installation time.
+At first glance, the solution is to create a single exFAT or NTFS partition on the installation media, but because the UEFI specification only mandates that FAT12/16/32 filesystems are bootable, this is only suitable if the vendor chose to add support for these additional filesystems. This support is not typically publicly documented. Another solution may be to apply "maximum" compression to the file using `dism` to decrease filesize to below the 4GiB limit of FAT32, but this method requires a Windows host, additional skill and time, and the associated decompression will increase CPU overhead during installation, which may result in lengthier installation time.
 
 # Simplest Solution
 The official Media Creation Tool from Microsoft uses a similar, if not identical, method.
