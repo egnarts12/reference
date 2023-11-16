@@ -7,15 +7,9 @@ At first glance, the solution is to create a single exFAT or NTFS partition on t
 The official Media Creation Tool from Microsoft uses a similar, if not identical, method. These generic instructions can be used on any OS.
 
 NOTE: MBR and GPT are both suitable
-## Step 1
+
 Create two partitions on the flash drive, as shown in the table below. NOTE: Check the combined size of the files listed in the "Contents" column before creating the partitions to verify the partition size is adequate. Then, copy the files in the "Contents" column to the respective partition.
 | Partition | Filesystem | Size (Example) | Contents |
 |----------:|-----------:|---------------:|----------|
-| 1 | FAT32 | 2GiB | Contents of the Windows ISO, not including the `Sources` folder
+| 1 | FAT32 | 2GiB | Contents of the Windows ISO, not including the `Sources` folder. From the `Sources` folder, only copy `Sources\boot.wim` to `Sources\boot.wim`
 | 2 | NTFS | 6GiB | Contains only the entire `Sources` folder from the ISO
-
-## Step 2
-Create a folder titled `Sources` on the FAT32 partition and copy `Sources\boot.wim` to this folder from the ISO.
-
-## Step 3
-Install Windows from your flash drive.
