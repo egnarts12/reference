@@ -11,5 +11,5 @@ NOTE: MBR and GPT are both suitable
 Create two partitions on the flash drive, as shown in the table below. NOTE: Check the combined size of the files listed in the "Contents" column before creating the partitions to verify the partition size is adequate. Then, copy the files in the "Contents" column to the respective partition.
 | Partition | Filesystem | Size (Example) | Contents |
 |----------:|-----------:|---------------:|----------|
-| 1 | FAT32 | 2GiB | Contents of the Windows ISO, not including the `Sources` folder. From the `Sources` folder, only copy `Sources\boot.wim` to `Sources\boot.wim`
+| 1 | FAT32 | 2GiB | Contents of the Windows ISO, not including the `Sources` folder. From the  `Sources` folder of the ISO, only copy `Sources\boot.wim` to `Sources\boot.wim` of the new installation media.
 | 2 | NTFS | 6GiB | Contains only the entire `Sources` folder from the ISO
